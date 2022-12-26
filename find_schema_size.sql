@@ -12,4 +12,4 @@ SELECT schemas.name,
        schemas.size::float / (SELECT size FROM db)  * 100 as relative_size
 FROM schemas;
 
-```source: https://stackoverflow.com/a/63600339/11592839```
+source: [https://stackoverflow.com/a/63600339/11592839]
