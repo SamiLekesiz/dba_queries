@@ -16,5 +16,5 @@ WHERE NOT blockedl.granted AND blockinga.datname = current_database();
 
 
 --Remove deadlock
-SELECT pg_cancel_backend(PID_ID);
-SELECT pg_terminate_backend(PID_ID);
+SELECT pg_cancel_backend(pid);
+SELECT pg_terminate_backend(pid);
