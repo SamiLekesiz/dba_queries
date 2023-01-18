@@ -13,3 +13,8 @@ JOIN pg_locks blockingl ON (blockingl.transactionid = blockedl.transactionid OR
                             blockingl.locktype = blockedl.locktype) AND blockedl.pid <> blockingl.pid
 JOIN pg_stat_activity blockinga ON blockingl.pid = blockinga.pid AND blockinga.datid = blockeda.datid
 WHERE NOT blockedl.granted AND blockinga.datname = current_database();
+
+
+--Remove deadlock
+SELECT pg_cancel_backend(PID_ID);
+SELECT pg_terminate_backend(PID_ID);
