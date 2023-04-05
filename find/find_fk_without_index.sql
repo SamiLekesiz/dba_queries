@@ -1,4 +1,4 @@
--- check for FKs where there is no matching index
+# check for FKs where there is no matching index
 -- on the referencing side
 -- or a bad index
 
