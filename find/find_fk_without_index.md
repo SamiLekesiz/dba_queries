@@ -1,6 +1,6 @@
 # check for FKs where there is no matching index
 ### on the referencing side or a bad index
-[source:](https://stackoverflow.com/a/33293747/11592839)
+[source]([https://stackoverflow.com/a/33293747/11592839](https://github.com/pgexperts/pgx_scripts/blob/master/indexes/fk_no_index.sql))
 ```
 WITH fk_actions ( code, action ) AS (
     VALUES ( 'a', 'error' ),
