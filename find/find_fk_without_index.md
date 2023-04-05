@@ -1,5 +1,6 @@
 # check for FKs where there is no matching index
 ### on the referencing side or a bad index
+[source:](https://stackoverflow.com/a/33293747/11592839)
 ```
 WITH fk_actions ( code, action ) AS (
     VALUES ( 'a', 'error' ),
@@ -119,5 +120,3 @@ WHERE table_mb > 0
         OR parent_mb > 0 )
 ORDER BY issue_sort, table_mb DESC, table_name, fk_name;
 ```
-
-[source:](https://stackoverflow.com/a/33293747/11592839)
