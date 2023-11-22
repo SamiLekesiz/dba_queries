@@ -1,0 +1,8 @@
+SELECT
+    p.relname AS partition_name,
+    pg_get_expr(p.relpartbound, p.oid) AS partition_bound,
+    pg_get_partkeydef (p.oid) AS partition_key
+FROM
+    pg_partition_tree ('MYTABLE') AS t
+    JOIN pg_class AS p ON p.oid = t.relid;
+
