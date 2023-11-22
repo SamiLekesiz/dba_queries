@@ -1,3 +1,4 @@
+\c  mydatabase
 SELECT
     p.relname AS partition_name,
     pg_get_expr(p.relpartbound, p.oid) AS partition_bound,
